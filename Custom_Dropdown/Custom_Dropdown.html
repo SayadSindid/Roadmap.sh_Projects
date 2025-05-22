@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-slate-800 w-screen h-screen flex justify-center items-center">
+        <div class=" w-[12%] h-1/2 flex flex-col gap-3">
+            <button class="border-black border-2 rounded-2xl w-full h-[12%] bg-white flex items-center p-3 relative DropdownButton">
+                <div class="font-['Rubik'] font-normal mainItem">
+                Select an Item
+                </div>
+                
+                <svg data-accordion-icon class="w-3 h-3 right-0 absolute transform transition-all rotate-360 mr-3" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="#4b5563" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+
+            </button>
+
+                <div class="w-full h-2/3 bg-white border-black border-2 rounded-2xl flex-col gap-0 hidden DropdownList">
+                    <div class="font-['Rubik'] font-normal flex-1 p-4 cursor-pointer relative flex-row flex DropdownItem" data-item="1">
+                        <span>First Item</span>
+                    </div>
+                    
+                    <hr class="border-t-2 border-black">
+
+                    <div class="font-['Rubik'] font-normal p-4 flex-1 cursor-pointer relative flex-row flex DropdownItem" data-item="2">
+                        <span>Second Item</span>
+                    </div>
+                    
+                    <hr class="border-t-2 border-black">
+
+                    <div class="font-['Rubik'] font-normal p-4 flex-1 cursor-pointer relative flex-row flex DropdownItem" data-item="3">
+                        <span>Third Item</span>
+                    </div>
+                    
+                    <hr class="border-t-2 border-black">
+                    
+                    <div class="font-['Rubik'] font-normal p-4 flex-1 cursor-pointer relative flex-row flex DropdownItem" data-item="4">
+                        <span>Fourth Item</span>
+                    </div>
+                    
+                    <hr class="border-t-2 border-black">
+                
+                    <div class="font-['Rubik'] font-normal p-4 flex-1 cursor-pointer relative flex-row flex DropdownItem" data-item="5">
+                        <span>Fifth Item</span>
+                    </div>
+                    
+                </div>
+                
+                <template id="template">
+                <svg xmlns="http://www.w3.org/2000/svg" class="right-0 absolute mr-4 svgCheckmark" width="24" height="24" viewBox="0 0 32 32">
+                    <path fill="#000"
+                        d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m-2 19.59l-5-5L10.59 15L14 18.41L21.41 11l1.596 1.586Z" />
+                    <path fill="none" d="m14 21.591l-5-5L10.591 15L14 18.409L21.41 11l1.595 1.585z" />
+                </svg>
+                </template>
+
+        </div>
+
+
+</body>
+
+    <script src="Custom_Dropdown.js"></script>
+
+</html>

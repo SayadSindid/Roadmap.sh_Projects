@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-zinc-900 w-screen h-screen flex justify-center items-center">
+
+    <div class="h-1/2 w-1/3 border-2 border-black bg-slate-300 rounded-xl flex flex-col px-24 py-12 gap-3">
+        <div class="font-['Winky_Rough'] text-2xl">
+            Task Tracker
+        </div>
+
+        <div class="rounded-lg w-full h-[12%] relative  ">
+            <input placeholder="Start writing and press enter to create task" class="focus:outline-none h-full rounded-lg w-full pl-3 pb-1 placeholder:text-base placeholder:font-semibold placeholder:text-gray-600/40 border-2 border-black inputText"/>
+            
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-1 top-1 cursor-pointer EnterButton" width="32" height="32" viewBox="0 0 48 48">
+                    <defs>
+                        <mask id="ipSEnterKey0">
+                            <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                                <path fill="#fff" stroke="#fff" d="M44 44V4H24v16H4v24z" />
+                                <path stroke="#000" d="m21 28l-4 4l4 4" />
+                                <path stroke="#000" d="M34 23v9H17" />
+                            </g>
+                        </mask>
+                    </defs>
+                    <path fill="#000" d="M0 0h48v48H0z" mask="url(#ipSEnterKey0)" />
+                </svg>
+            </svg>
+        </div>
+
+        <div class="taskList">
+
+        </div>
+
+    </div>
+
+
+
+    <template id="tmpl">
+        <div class="flex flex-col gap-2 taskLine">
+            <div class="w-full font-['Winky_Rough'] flex flex-row items-center relative">
+                <div class="border-2 border-black w-4 h-4 rounded-sm mr-1 cursor-pointer stateButton">
+                </div>
+                <span class="textTask">New task is created and added to the list</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="right-0 absolute cursor-pointer eraseButton" width="20" height="20"
+                    viewBox="0 0 24 24">
+                    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 7h16m-10 4v6m4-6v6M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+                </svg>
+        
+            </div>
+            <hr class="border-t-2 border-gray-600/25 rounded-xl">
+        </div>
+    </template>
+
+</body>
+
+    <script src="Task_Tracker.js"></script>
+
+</html>

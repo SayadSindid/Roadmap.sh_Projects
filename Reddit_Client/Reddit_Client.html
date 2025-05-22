@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+    <body class="bg-zinc-900 w-screen h-auto md:h-screen px-16 flex justify-center items-center relative">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" class="absolute top-10 cursor-pointer hover:rotate-90 transform transition-all plusShowPopup" viewBox="0 0 32 32">
+            <path fill="#FFF" d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13s13-5.832 13-13S23.168 3 16 3m0 2c6.087 0 11 4.913 11 11s-4.913 11-11 11S5 22.087 5 16S9.913 5 16 5m-1 5v5h-5v2h5v5h2v-5h5v-2h-5v-5z" />
+        </svg>
+
+        <div class="w-5/6 md:w-auto  bg-white p-4 border-black border-2 rounded-xl font-['Winky_Rough'] hidden popupSubreddit fixed md:absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto z-10">
+            <div class="pl-4 mb-2">
+                Enter the name of the subreddit
+            </div>
+
+            <input class="w-[90%] pl-2 border-2 rounded-md ml-3 h-10 bg-slate-100 focus:outline-none focus:border-black inputNameSubreddit">
+
+        
+            <button class="ml-3 bg-black text-white w-[90%] h-10 mt-3 rounded-md active:translate-y-0.5 transform transition-all active:bg-black/85 buttonAddSub">
+                Add Subreddit
+            </button>
+
+            <div class="text-red-600 text-lg font-semibold text-center justify-center pt-3 hidden information-Message">
+                Error while fetching Subreddit, please try again later.
+                </div>
+
+        </div>
+
+        <div class="px-3 bg-white absolute flex justify-center items-center bottom-5 left-[40%] w-[20%] h-[10%] rounded-md border-4 border-red-500 flex-row gap-3 alert-Box opacity-100 -translate-y-0 hidden transform transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                <path fill="#ff0303" d="M12 17q.425 0 .713-.288T13 16t-.288-.712T12 15t-.712.288T11 16t.288.713T12 17m-1-4h2V7h-2zm1 9q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22" />
+            </svg>
+            
+            <div class="font-semibold text-xl text-red-600 inner-text">
+                Error the maximum amount of Subreddit has been added.
+            </div>
+
+        </div>
+
+
+        <div class="w-full h-auto mt-32 md:h-4/5 md:w-full bg-blue-300 border-2 border-black flex flex-col md:flex-row lineZone">
+
+                
+        
+        </div>
+
+    </body>
+
+    <template class="templateNewLane">
+        <div class="bg-red-300 max-h-screen w-full md:w-[20%] md:h-full border-r-2 border-black flex flex-col relative laneSubreddit">
+            <div class="flex flex-row w-full items-center relative h-[35%] md:h-[10%]">
+                <div class="font-['Winky_Rough'] text-lg p-5 titleSubreddit">
+                    /r/learnprogramming
+                </div>    
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="absolute right-0 mr-2 cursor-pointer dotMenu" viewBox="0 0 16 16"><path fill="#000" d="M7 4c0-.14 0-.209.008-.267a.85.85 0 0 1 .725-.725C7.79 3 7.86 3 8 3s.209 0 .267.008a.85.85 0 0 1 .725.725C9 3.79 9 3.86 9 4s0 .209-.008.267a.85.85 0 0 1-.725.725C8.21 5 8.14 5 8 5s-.209 0-.267-.008a.85.85 0 0 1-.725-.725C7 4.21 7 4.14 7 4m0 4c0-.14 0-.209.008-.267a.85.85 0 0 1 .725-.725C7.79 7 7.86 7 8 7s.209 0 .267.008a.85.85 0 0 1 .725.725C9 7.79 9 7.86 9 8s0 .209-.008.267a.85.85 0 0 1-.725.725C8.21 9 8.14 9 8 9s-.209 0-.267-.008a.85.85 0 0 1-.725-.725C7 8.21 7 8.14 7 8m0 4c0-.139 0-.209.008-.267a.85.85 0 0 1 .724-.724c.059-.008.128-.008.267-.008s.21 0 .267.008a.85.85 0 0 1 .724.724c.008.058.008.128.008.267s0 .209-.008.267a.85.85 0 0 1-.724.724c-.058.008-.128.008-.267.008s-.209 0-.267-.008a.85.85 0 0 1-.724-.724C7 12.209 7 12.139 7 12"/></svg>
+            </div>
+
+            <div class="absolute top-14 right-4 font-['Winky_Rough'] bg-white w-3/4 h-[15%] rounded-xl border-black border-2 z-10 hidden popupStateSub">
+                <div class="p-2 border-b-2 border-black cursor-pointer refresh-button">
+                    Refresh
+                </div>
+                
+                <div class="p-2 cursor-pointer delete-button">
+                    Delete
+                </div>
+            </div>
+
+            <div class="flex flex-col w-full font-['Winky_Rough'] bg-white h-[90%] transition-shadow overflow-y-auto overflow-x-clip columnSub">
+                <div class="postTemplate">
+                    <div class="flex flex-row w-full items-center border-b-2 border-black">
+                        <div class="w-10 flex flex-col-reverse items-center ml-3 mb-2">
+                            <div class="-mt-1 scoreUpvote">
+                                400
+                            </div>
+                            
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" class="-rotate-90" viewBox="0 0 12 24">
+                            <defs>
+                                <path id="weuiArrowOutlined0" fill="#000" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+                            </defs>
+                            <use fill-rule="evenodd" href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)" />
+                        </svg>
+                        </div>
+
+                        <div class="ml-3 text-lg postTile">
+                            Post title here
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="items-center justify-center pl-3 pt-3 font-semibold authorPost">
+                        SuperMan
+                    </div>
+
+
+                    <div class="items-center justify-center p-3 contentPost">
+                        Ive been programming for a while but it seems like im stuck in the same level, im not learning anything new and my skills are so low, how can i increase my skill level and not be scared of trying to learn new stuff
+                    </div>
+                </div>
+
+                
+                </div>
+            </div>
+    </template>
+
+
+<script src="Reddit_Client.js"></script>
+
+</html>
